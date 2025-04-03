@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoyageTrack - Application</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@heroicons/v2.0.18/24/outline/index.js"></script>
+</head>
+<body>
+    <!-- Barre de navigation -->
+    <nav class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold">VoyageTrack</h1>
+            <div class="flex items-center space-x-4">
+                <button class="p-2 hover:bg-blue-700 rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenu principal -->
+    <div class="container mx-auto px-4 py-6">
+        <!-- Carte de suivi en direct -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h2 class="text-xl font-bold mb-4 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                </svg>
+                Votre trajet en cours
+            </h2>
+            <div class="bg-gray-100 h-48 rounded-lg animate-pulse">
+                <!-- Intégrer une carte (Google Maps/Mapbox) ici -->
+            </div>
+            <div class="mt-4 flex items-center text-green-600">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                À l'heure - Arrivée prévue à 12:00
+            </div>
+        </div>
+
+        <!-- Prochains voyages -->
+        <h2 class="text-xl font-bold mb-4">Vos réservations</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Carte de réservation 1 -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-bold mb-2">Paris → Lyon</h3>
+                        <p class="text-gray-600">25 mars 2024 - 08:30</p>
+                        <div class="mt-2 flex items-center">
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">Confirmé</span>
+                        </div>
+                    </div>
+                    <button class="text-blue-600 hover:text-blue-800">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15m0-3l-3-3m0 0l-3 3m3-3V15" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-100">
+                    <div class="flex justify-between text-sm">
+                        <span>Siège 14B</span>
+                        <span class="font-bold">29,50€</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plus de cartes de réservation... -->
+        </div>
+    </div>
+
+    <!-- Barre de navigation basse -->
+    <div class="fixed bottom-0 w-full bg-white border-t">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-4 py-3">
+                <button class="flex flex-col items-center text-blue-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                    </svg>
+                    <span class="text-xs mt-1">Accueil</span>
+                </button>
+                
+                <button class="flex flex-col items-center text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span class="text-xs mt-1">Historique</span>
+                </button>
+
+                <button class="flex flex-col items-center text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                    </svg>
+                    <span class="text-xs mt-1">Aide</span>
+                </button>
+
+                <button class="flex flex-col items-center text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                    </svg>
+                    <span class="text-xs mt-1">Profil</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Vérifier si l'onboarding a été complété
+        if(!localStorage.getItem('onboardingCompleted')) {
+            window.location.href = 'onboarding.html';
+        }
+    </script>
+</body>
+</html>

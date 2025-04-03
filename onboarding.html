@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onboarding - VoyageTrack</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- Container principal -->
+    <div class="h-screen w-full overflow-hidden relative">
+        <!-- Slides container -->
+        <div id="slidesContainer" class="flex h-full transition-transform duration-300">
+            <!-- Slide 1 -->
+            <div class="min-w-full h-full flex flex-col items-center justify-center p-8 bg-blue-50">
+                <div class="mb-8 animate-bounce">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-32 h-32 text-blue-600">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+                    </svg>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Réservez en un clic</h2>
+                <p class="text-gray-600 text-center mb-8">
+                    Trouvez votre prochain voyage en temps réel parmi des centaines de destinations
+                </p>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="min-w-full h-full flex flex-col items-center justify-center p-8 bg-green-50">
+                <div class="mb-8 animate-pulse">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-32 h-32 text-green-600">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z" />
+                    </svg>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Suivi en direct</h2>
+                <p class="text-gray-600 text-center mb-8">
+                    Suivez votre bus en temps réel et recevez des notifications en cas de retard
+                </p>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="min-w-full h-full flex flex-col items-center justify-center p-8 bg-purple-50">
+                <div class="mb-8 rotate-12">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-32 h-32 text-purple-600">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 9V4.5M12 12V4.5M15 15V4.5M19.125 19.125L20.625 20.625M4.5 6.75h15a3.375 3.375 0 013.375 3.375V19.5a3 3 0 01-3 3H5.25a3 3 0 01-3-3v-9.375A3.375 3.375 0 014.5 6.75z" />
+                    </svg>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">E-billet sécurisé</h2>
+                <p class="text-gray-600 text-center mb-8">
+                    Votre billet numérique toujours accessible, même hors connexion
+                </p>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="min-w-full h-full flex flex-col items-center justify-center p-8 bg-yellow-50">
+                <div class="mb-8 animate-bounce">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-32 h-32 text-yellow-600">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                    </svg>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Voyagez serein</h2>
+                <p class="text-gray-600 text-center mb-8">
+                    Des conducteurs vérifiés et des avis authentiques pour choisir en confiance
+                </p>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex space-x-2">
+            <div id="dot1" class="w-3 h-3 rounded-full bg-blue-600"></div>
+            <div id="dot2" class="w-3 h-3 rounded-full bg-gray-300"></div>
+            <div id="dot3" class="w-3 h-3 rounded-full bg-gray-300"></div>
+            <div id="dot4" class="w-3 h-3 rounded-full bg-gray-300"></div>
+        </div>
+
+        <!-- Boutons de navigation -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-4">
+            <button id="prevBtn" class="px-6 py-2 text-gray-600 hidden" onclick="prevSlide()">
+                Retour
+            </button>
+            <button id="nextBtn" class="px-6 py-2 bg-blue-600 text-white rounded-full" onclick="nextSlide()">
+                Suivant
+            </button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const totalSlides = 4;
+        const slidesContainer = document.getElementById('slidesContainer');
+        const nextBtn = document.getElementById('nextBtn');
+        const prevBtn = document.getElementById('prevBtn');
+
+        function updateUI() {
+            // Mise à jour des points
+            document.querySelectorAll('[id^="dot"]').forEach((dot, index) => {
+                dot.style.backgroundColor = index === currentSlide ? '#2563eb' : '#e5e7eb';
+            });
+
+            // Gestion des boutons
+            prevBtn.style.display = currentSlide === 0 ? 'none' : 'block';
+            nextBtn.textContent = currentSlide === totalSlides - 1 ? 'Commencer' : 'Suivant';
+
+            // Défilement des slides
+            slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides - 1) {
+                currentSlide++;
+                updateUI();
+            } else {
+                // Redirection vers l'application
+                localStorage.setItem('onboardingCompleted', 'true');
+                window.location.href = 'login.html';
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateUI();
+            }
+        }
+
+        // Animation initiale
+        setTimeout(() => {
+            document.querySelectorAll('svg').forEach(icon => {
+                icon.style.opacity = '1';
+                icon.style.transform = 'translateY(0)';
+            });
+        }, 100);
+    </script>
+
+    <style>
+        [id^="dot"] {
+            transition: background-color 0.3s ease;
+        }
+        
+        svg {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+        }
+    </style>
+</body>
+</html>
